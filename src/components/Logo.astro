@@ -1,9 +1,15 @@
 ---
-import { SITE } from 'astrowind:config';
+import clab from '~/assets/images/logo-clab.png';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
-</span>
+<div class="flex items-center">
+  <!-- Espacio reservado para el logo UdeC -->
+  <div class="w-[150px]"></div>
+
+  <!-- Logo CLab -->
+  <img
+    src={clab.src}
+    alt="CLab"
+    class="h-20 w-auto"
+  />
+</div>

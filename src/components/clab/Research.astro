@@ -1,0 +1,61 @@
+---
+import researchHero from '~/assets/images/research.png';
+import res from '~/assets/images/res.png';
+---
+<!-- HERO -->
+<section
+  class="relative h-[500px] flex items-center justify-center overflow-hidden"
+>
+  <img
+    src={researchHero.src}
+    alt="Publications"
+    class="absolute inset-0 w-full h-full object-cover object-center"
+  />
+
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-white font-extrabold text-5xl md:text-7xl">
+      Research
+    </h1>
+
+    <p class="mt-8 text-white/90 text-xl">
+      Organic synthesis, medicinal chemistry and computational chemistry
+    </p>
+  </div>
+</section>
+
+     <section class="bg-white py-12">
+  <div class="max-w-5xl mx-auto px-8">
+
+    <p class="text-xl leading-9 text-gray-700 text-justify">
+        The <strong>Organic Synthesis & Molecular Design Laboratory (CLab)</strong>
+        develops innovative synthetic strategies for the preparation of structurally
+        diverse small molecules inspired by natural products and biologically relevant
+        scaffolds. Our research integrates <strong>organic synthesis</strong>,
+        <strong>medicinal chemistry</strong>, and
+        <strong>computational chemistry</strong> to generate molecular libraries
+        with potential applications in human health.
+      </p>
+      <img
+  src={res.src}
+  alt="Graphical abstract"
+  class="mt-8 mx-auto max-w-xl"
+/>
+<div class="mt-8">
+  <p class="text-xl leading-9 text-gray-700 text-justify">
+
+    <strong>Organic Synthesis:</strong>
+    We develop efficient synthetic methodologies for the construction and diversification of complex molecular architectures through function-oriented synthesis (FOS), skeletal editing, and cascade reactions.
+    
+    <strong>Medicinal Chemistry:</strong>
+    We design and optimize bioactive molecules targeting diseases of high societal impact, with a particular focus on breast cancer, Alzheimer's disease, and cardiovascular disorders.
+    
+    <strong>Computational Chemistry:</strong>
+    Computational studies combining molecular docking, density functional theory (DFT), and transition-state (TS) calculations are used to investigate reaction mechanisms, understand molecular recognition, and guide the rational design of new bioactive compounds.
+    
+    By integrating synthetic chemistry, biological evaluation, and computational approaches, CLab seeks to accelerate the discovery of innovative molecules with therapeutic potential while advancing sustainable strategies in modern organic synthesis.
+
+  </p>
+</div>
+</section>

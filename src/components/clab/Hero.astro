@@ -1,55 +1,59 @@
 ---
 import hero from '~/assets/images/lab-hero.png';
+import udec from '~/assets/images/logo-udec.png';
 ---
 
 <section
   id="home"
-class="relative min-h-screen flex items-start justify-center overflow-hidden pt-24"
+  class="relative h-[500px] flex items-center justify-center overflow-hidden"
 >
   <!-- Imagen de fondo -->
   <img
-    src="/images/lab-hero.png"
-    alt="CLab"
-    class="absolute inset-0 w-full h-full object-cover"
+    src={hero.src}
+    alt="CLab Laboratory"
+    class="absolute inset-0 w-full h-full object-cover object-[50%_40%]"
   />
 
   <!-- Capa oscura -->
-  <div class="absolute inset-0 bg-black/45"></div>
+  <div class="absolute inset-0 bg-black/50"></div>
 
-  <!-- Texto -->
+  <!-- Contenido -->
   <div class="relative z-10 text-center px-6">
     <h1
-      class="text-white font-extrabold leading-[1.15] text-3xl md:text-5xl lg:text-6xl"
-    >
-      Organic Synthesis &
-      <br />
-      Molecular Design Lab
-    </h1>
+  class="text-white font-extrabold leading-[1.15]
+         text-4xl
+         md:text-6xl
+         lg:text-7xl"
+>
+  Organic Synthesis &
+  <br />
+  Molecular Design Lab
+</h1>
 
-    <p class="mt-8 text-white/90 text-xl md:text-2xl">
-      Department of Organic Chemistry
-      <br />
-      University of Concepción
-    </p>
   </div>
 </section>
-
-<section class="bg-white py-6">
+<section class="bg-white py-24">
   <div class="max-w-5xl mx-auto px-8">
 
-    <p class="text-lg leading-8 text-gray-700 text-justify">
-      <strong>CLab – Laboratory of Organic Synthesis and Molecular Design</strong> is a research group at the
+    <p class="text-xl leading-9 text-gray-700 text-justify">
+       <strong>CLab – Laboratory of Organic Synthesis and Molecular Design</strong> is a research group at the
       <strong>University of Concepción, Chile.</strong>
       Our research focuses on the development of synthetic methodologies for the efficient assembly of complex organic molecules and the discovery of biologically active compounds. We integrate cascade reactions, catalytic processes, and function-oriented molecular design to access molecular architectures inspired by natural products and medicinally relevant compounds. Our research is directed toward therapeutic applications in breast cancer, Alzheimer's disease, and cardiovascular disorders.
     </p>
 
     <p class="mt-8 text-lg leading-8 text-gray-700">
-      <strong>Interested in joining CLab?</strong><br />
-      Please send your CV and a cover letter to
+      <strong>Interested in joining CLab?</strong><br /> Please send your CV and a cover letter to
       <a href="mailto:cparra@udec.cl" class="text-sky-700 hover:underline">cparra@udec.cl</a>
       or
       <a href="mailto:maxmartinez@udec.cl" class="text-sky-700 hover:underline">maxmartinez@udec.cl</a>.
     </p>
 
   </div>
+  <div class="mt-16 flex justify-center">
+  <img
+    src={udec.src}
+    alt="Universidad de Concepción"
+    class="h-24 w-auto opacity-90"
+  />
+</div>
 </section>

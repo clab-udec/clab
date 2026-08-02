@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: CLab
+  site: 'https://clab-udec.github.io'
   base: '/'
   trailingSlash: false
 
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: CLab
+    template: '%s | CLab'
+  description: "CLab – Organic Synthesis & Molecular Design. Research in synthetic organic chemistry, medicinal chemistry and function-oriented synthesis at the University of Concepción."
   robots:
     index: true
     follow: true

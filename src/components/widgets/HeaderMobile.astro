@@ -1,0 +1,142 @@
+---
+import Logo from '~/components/Logo.astro';
+import { trimSlash } from '~/utils/permalinks';
+
+interface Link {
+  text?: string;
+  href?: string;
+}
+
+interface MenuLink extends Link {
+  links?: Array<MenuLink>;
+}
+
+export interface Props {
+  id?: string;
+  links?: Array<MenuLink>;
+}
+
+const {
+  id = 'header-mobile',
+  links = [],
+} = Astro.props;
+
+const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+---
+
+<header
+  id={id}
+  class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md"
+>
+
+  <div class="flex items-center justify-between px-5 py-4">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+      <Logo />
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button
+      id="menu-toggle"
+      type="button"
+      aria-label="Open navigation"
+      class="text-white text-4xl leading-none"
+    >
+      ☰
+    </button>
+
+  </div>
+
+  <!-- Overlay -->
+ <div
+  id="mobile-overlay"
+  class="fixed inset-0 z-[60] bg-black/40 hidden"
+></div>
+
+  <!-- Panel lateral -->
+  <aside
+  id="mobile-panel"
+  class="fixed top-0 right-0 z-[70] h-screen w-72 bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-in-out"
+>
+
+    <!-- Cabecera -->
+    <div class="flex items-center justify-between px-6 py-6 border-b">
+
+      <span class="text-xl font-bold text-slate-900">
+        CLab
+      </span>
+
+      <button
+        id="menu-close"
+        class="text-3xl text-slate-700"
+      >
+        ✕
+      </button>
+
+    </div>
+
+    <!-- Navegación -->
+    <nav class="mt-6">
+
+      <ul class="flex flex-col">
+
+        {
+          links.map(({ text, href }) => (
+            <li>
+              <a
+                href={href}
+                class:list={[
+                  "block px-8 py-5 text-lg font-semibold text-slate-800 border-b border-slate-100 hover:bg-slate-100 transition-colors",
+                  {
+                    "bg-slate-100": href === currentPath,
+                  },
+                ]}
+              >
+                {text}
+              </a>
+            </li>
+          ))
+        }
+
+      </ul>
+
+    </nav>
+
+  </aside>
+
+</header><script is:inline>
+function initMobileMenu() {
+  const openButton = document.getElementById('menu-toggle');
+  const closeButton = document.getElementById('menu-close');
+  const panel = document.getElementById('mobile-panel');
+  const overlay = document.getElementById('mobile-overlay');
+
+  if (!openButton || !closeButton || !panel || !overlay) {
+    return;
+  }
+
+  const openMenu = () => {
+    panel.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+  };
+
+  const closeMenu = () => {
+    panel.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  };
+
+  openButton.addEventListener('click', openMenu);
+  closeButton.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  panel.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initMobileMenu);
+document.addEventListener('astro:page-load', initMobileMenu);
+</script>

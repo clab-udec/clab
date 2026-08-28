@@ -1,0 +1,71 @@
+---
+import hero from '~/assets/images/lab-hero.png';
+import udec from '~/assets/images/logo-udec.png';
+---
+
+<!-- HERO -->
+<section
+  id="home"
+  class="relative h-[70vh] min-h-[520px] flex items-center justify-center overflow-hidden"
+>
+  <!-- Imagen -->
+  <img
+    src={hero.src}
+    alt="CLab Laboratory"
+    class="absolute inset-0 w-full h-full object-cover object-center"
+  />
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/55"></div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 text-center px-8">
+
+    <h1 class="text-white font-extrabold leading-tight text-5xl">
+      Organic Synthesis
+      <br />
+      &
+      <br />
+      Molecular Design
+    </h1>
+
+    <p class="mt-6 text-white/90 text-lg tracking-wide">
+      University of Concepción
+    </p>
+
+    <div class="mt-10 text-white text-3xl animate-bounce">
+      ↓
+    </div>
+
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="bg-white py-14">
+
+  <div class="max-w-md mx-auto px-7">
+
+    <h2 class="text-3xl font-bold text-slate-900">
+      About CLab
+    </h2>
+
+    <p class="mt-6 text-lg leading-8 text-gray-700">
+      <strong>CLab</strong> develops innovative synthetic methodologies,
+      cascade reactions, catalytic processes and molecular design
+      strategies for the preparation of biologically active compounds
+      inspired by natural products.
+    </p>
+
+    <div class="mt-10 flex justify-center">
+
+      <img
+        src={udec.src}
+        alt="University of Concepción"
+        class="h-20 w-auto"
+      />
+
+    </div>
+
+  </div>
+
+</section>

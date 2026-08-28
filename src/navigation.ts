@@ -4,25 +4,26 @@ export const headerData = {
   links: [
     {
       text: 'HOME',
-      href: { type: 'home' },
+      href: getPermalink('/'),
     },
     {
       text: 'CP & MM',
-      href: '/cp-mm',
+      href: getPermalink('/cp-mm'),
     },
     {
-  text: 'THE GROUP',
-  href: '/team',
-},
+      text: 'THE GROUP',
+      href: getPermalink('/team'),
+    },
     {
       text: 'RESEARCH',
-      href: 'research',
+      href: getPermalink('/research'),
     },
     {
       text: 'PUBLICATIONS',
-      href: 'publications',
+      href: getPermalink('/publications'),
     },
   ],
+
   actions: [],
 };
 

@@ -1,6 +1,9 @@
 ---
 import Layout from '~/layouts/Layout.astro';
+
 import Header from '~/components/widgets/Header.astro';
+import HeaderMobile from '~/components/widgets/HeaderMobile.astro';
+
 import Footer from '~/components/widgets/Footer.astro';
 import Announcement from '~/components/widgets/Announcement.astro';
 
@@ -17,19 +20,31 @@ const { metadata } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
+
   <slot name="header">
-    <Header
-      links={applyGetPermalinks(headerData.links)}
-      actions={headerData.actions}
-      isSticky={false}
-      showToggleTheme={false}
-      showRssFeed={false}
-    />
+
+    <!-- Header escritorio -->
+    <div class="hidden md:block">
+      <Header
+        links={applyGetPermalinks(headerData.links)}
+        actions={headerData.actions}
+        isSticky={false}
+        showToggleTheme={false}
+        showRssFeed={false}
+      />
+    </div>
+
+    <!-- Header móvil -->
+    <div class="block md:hidden">
+      <HeaderMobile
+        links={applyGetPermalinks(headerData.links)}
+      />
+    </div>
+
   </slot>
 
   <main class="bg-white min-h-screen">
     <slot />
   </main>
 
-  
 </Layout>

@@ -2,15 +2,27 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/clab/Hero.astro';
-import Research from '~/components/clab/Research.astro';
-import Publications from '~/components/clab/Publications.astro';
-import Team from '~/components/clab/Team.astro';
-import Facilities from '~/components/clab/Facilities.astro';
-import Contact from '~/components/clab/Contact.astro';
+import HeroMobile from '~/components/clab/HeroMobile.astro';
 
-const metadata = {title: 'CLab | Organic Synthesis & Molecular Design'};
+import News from '~/components/clab/News.astro';
+
+const metadata = {
+  title: 'CLab | Organic Synthesis & Molecular Design',
+};
 ---
 
 <Layout metadata={metadata}>
-  <Hero />
+
+  <!-- Desktop -->
+  <div class="hidden md:block">
+    <Hero />
+    <News />
+  </div>
+
+  <!-- Mobile -->
+  <div class="block md:hidden">
+    <HeroMobile />
+    <News />
+  </div>
+
 </Layout>

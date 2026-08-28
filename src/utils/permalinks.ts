@@ -107,7 +107,7 @@ const definitivePermalink = (permalink: string): string => createPath(BASE_PATHN
 type MenuHref = { type?: string; url?: string };
 
 /** */
-export const applyGetPermalinks = (menu: unknown = {}): unknown => {
+export const applyGetPermalinks = (menu: unknown = {}): any => {
   if (Array.isArray(menu)) {
     return menu.map((item) => applyGetPermalinks(item));
   } else if (typeof menu === 'object' && menu !== null) {

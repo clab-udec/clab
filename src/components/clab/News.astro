@@ -1,11 +1,180 @@
-<section class="bg-white py-20">
-  <div class="mx-auto max-w-7xl px-6 text-center">
-    <h2 class="text-4xl font-bold text-slate-900">
-      Latest News
-    </h2>
+---
+import carlosNews from '~/assets/images/news-carlos.jpg';
+import valeriaNews from '~/assets/images/news-valeria.jpg';
+import geqorNews from '~/assets/images/news-geqor.jpg';
+---
 
-    <p class="mt-4 text-slate-600">
-      CLab latest news and activities.
+<section class="bg-white pt-1 pb-20">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <!-- SECTION DIVIDER -->
+    <div class="border-t border-gray-300 mb-12"></div>
+
+
+    <!-- TITLE -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl xl:text-5xl font-bold text-slate-900">
+        Latest News
+      </h2>
+
+      <div class="w-24 h-1 bg-amber-400 mx-auto mt-5"></div>
+    </div>
+
+
+    <!-- NEWS GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+
+      <!-- NEWS 1 -->
+      <article
+        class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-md
+               hover:shadow-lg transition-shadow duration-300"
+      >
+
+        <!-- IMAGE -->
+        <div class="aspect-[4/3] bg-gray-100">
+          <img
+            src={carlosNews.src}
+            alt="Carlos Arias at his pharmacy undergraduate thesis defense"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+
+        <!-- CONTENT -->
+        <div class="p-6">
+
+          <p class="text-sm text-gray-500 mb-2">
+            August 11, 2026
+          </p>
+
+          <h3 class="text-lg font-bold text-slate-900 mb-3">
+            Undergraduate Thesis Defense
+          </h3>
+
+          <p class="text-slate-600 leading-7">
+            Congratulations to Carlos Arias on the successful defense of his thesis at the Faculty of Medicine of the University of La Frontera.
+          </p>
+
+          <a
+            href="https://www.instagram.com/p/Db5paICkYMq/?img_index=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block mt-5 text-sky-700 font-semibold hover:underline"
+          >
+            View on Instagram →
+          </a>
+
+        </div>
+      </article>
+
+
+          <!-- NEWS 2 -->
+<article
+  class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-md
+         hover:shadow-lg transition-shadow duration-300"
+>
+
+  <!-- IMAGE -->
+  <div class="aspect-[4/3] bg-gray-100">
+    <img
+      src={valeriaNews.src}
+      alt="Research stay at the University of Barcelona"
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <!-- CONTENT -->
+  <div class="p-6">
+
+    <p class="text-sm text-gray-500 mb-2">
+      July 20, 2026
     </p>
+
+    <h3 class="text-lg font-bold text-slate-900 mb-3">
+      Research Stay at the University of Barcelona
+    </h3>
+
+    <p class="text-slate-600 leading-7">
+      Valentina is carrying out a research stay at the University of Barcelona as part of her doctoral studies, under the supervision of Dr. Ben Bradshaw.
+    </p>
+
+    <a
+      href="https://www.instagram.com/p/DbBIXQFEViS/?img_index=1"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block mt-5 text-sky-700 font-semibold hover:underline"
+    >
+      View on Instagram →
+    </a>
+
+  </div>
+</article>
+
+
+     <!-- NEWS 3 -->
+<article
+  class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-md
+         hover:shadow-lg transition-shadow duration-300"
+>
+
+  <!-- IMAGE -->
+  <div class="aspect-[4/3] bg-gray-100">
+    <img
+      src={geqorNews.src}
+      alt="Participation in GEQOR 2026"
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <!-- CONTENT -->
+  <div class="p-6">
+
+    <p class="text-sm text-gray-500 mb-2">
+      July 9, 2026
+    </p>
+
+    <h3 class="text-lg font-bold text-slate-900 mb-3">
+      Participation in GEQOR 2026
+    </h3>
+
+    <p class="text-slate-600 leading-7">
+      Dr. Claudio Parra participated in the XXX Biennial Meeting of the Specialized Group of Organic Chemistry (GEQOR 2026) in Gijón, Spain.
+    </p>
+
+    <a
+      href="https://www.instagram.com/p/DamBTG4EZap/?img_index=1"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block mt-5 text-sky-700 font-semibold hover:underline"
+    >
+      View on Instagram →
+    </a>
+
+  </div>
+</article>
+
+    </div>
+
+
+    <!-- INSTAGRAM BUTTON -->
+    <div class="text-center mt-12">
+
+      <a
+        href="https://www.instagram.com/clab_udec/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3
+               bg-slate-800 text-white font-semibold
+               px-8 py-4 rounded-lg shadow-md
+               hover:bg-slate-700 transition"
+      >
+        <span class="text-xl">◎</span>
+        View more on Instagram
+      </a>
+
+    </div>
+
   </div>
 </section>
+
